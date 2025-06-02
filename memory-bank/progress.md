@@ -17,3 +17,6 @@
 * [2025-06-02 19:40:53] - 开始任务：创建 `utils/text_processing` 模块基础结构。
 * [2025-06-02 19:44:19] - 完成任务：创建 `utils/text_processing` 模块基础结构。文件 `__init__.py`, `sanitizers.py`, `formatters.py`, `parsers.py`, `exceptions.py` 已按要求创建骨架并经过检查。
 * [2025-06-02 19:50:43] - 完成任务：创建 `tests/` 模块及其子目录基础结构。所有指定文件和目录已创建并通过检查。
+*   [2025-06-02 20:49:27] - 完成编码任务：实现 `core/llm_service.service.LLMService` 的 `get_available_models` 方法。方法已按要求修改，并更新了相关注释。
+* [2025-06-02 21:29:35] - 完成编码任务：实现 `core/api_gateway` 的 `/v1/models` 端点。修改了 `schemas.py`, `services.py`, 和 `router.py`，确保了正确的逻辑、类型提示、Pydantic 模型和文档字符串。
+* [2025-06-02 23:27:17] - Completed implementing placeholder `query_llm` method in `core/llm_service/service.py`.

@@ -7,20 +7,20 @@ from pydantic import BaseModel, Field
 
 class ModelCard(BaseModel):
     """
-    代表一个可用模型的详细信息。
+    代表一个可用模型的详细信息，用于 `/v1/models` 端点。
     """
-    id: str = Field(..., description="模型的唯一标识符。")
-    object: str = Field("model", description="对象类型，通常是 'model'。")
-    created: int = Field(..., description="模型创建的时间戳 (Unix epoch)。")
-    owned_by: str = Field("system", description="拥有该模型的组织或实体。")
+    id: str = Field(..., description="模型的唯一标识符。例如：'gemini-pro'")
+    object: str = Field("model", description="对象类型，固定为 'model'。")
+    # created: int = Field(..., description="模型创建的时间戳 (Unix epoch)。为了简化，此版本暂不强制要求。") # 暂时注释掉，根据需求，此字段非必需
+    owned_by: str = Field("system", description="拥有该模型的组织或实体。例如：'system' 或 'user'")
     # permission: List[Dict] # 更复杂的权限结构，暂时简化
 
 class ModelList(BaseModel):
     """
-    代表可用模型列表的响应体。
+    代表可用模型列表的响应体，用于 `/v1/models` 端点。
     """
-    object: str = Field("list", description="对象类型，通常是 'list'。")
-    data: List[ModelCard] = Field(..., description="包含模型对象的列表。")
+    object: str = Field("list", description="对象类型，固定为 'list'。")
+    data: List[ModelCard] = Field(..., description="包含模型卡片对象（ModelCard）的列表。")
 
 # --------------------
 # /v1/chat/completions 模式定义 (初步)
@@ -79,3 +79,13 @@ class ChatCompletionResponse(BaseModel):
     choices: List[ChatCompletionChoice] = Field(..., description="补全选项列表。")
     usage: Optional[Usage] = Field(None, description="API 使用情况统计。")
     # system_fingerprint: Optional[str] = None # 系统指纹
+
+# --------------------
+# /health 模式定义
+# --------------------
+
+class HealthStatus(BaseModel):
+    """
+    健康检查响应体。
+    """
+    status: str = Field(..., description="服务健康状态。")
