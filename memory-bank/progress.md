@@ -30,3 +30,21 @@ This file tracks the overall progress of the project, including completed tasks,
 *   **子任务**: 创建了重构提示词中定义的标准化目录结构，并在每个目录下创建了空的 `__init__.py` 文件。
 *   **完成模式**: 🧠 自动编码器
 *   **详细日志**: 参见 `memory-bank/activeContext.md` (已整合并清空)
+
+### 2025-06-02 - API Gateway 模块框架创建
+* 2025-06-02 16:19:49 - 完成 `core/api_gateway` 模块初始框架创建，包括 `__init__.py` 和 `router.py` (含占位符路由)。
+
+### 2025-06-02 - LLM Service 模块框架创建
+* 2025-06-02 16:30:07 - 完成 `core/llm_service` 模块初始框架创建，包括 `__init__.py` 和 `service.py` (含占位符函数)。
+
+### 2025-06-02 - Proxy Service 模块框架创建
+* 2025-06-02 16:45:14 - 完成 `core/proxy_service` 模块初始框架创建，包括 `__init__.py` 和 `service.py` (含占位符函数)。
+* [2025-06-02 17:07:19] - 完成 - 更新已创建模块中 Python 文件的代码注释为简体中文。涉及文件：`core/api_gateway/__init__.py`, `core/api_gateway/router.py`, `core/llm_service/__init__.py`, `core/llm_service/service.py`, `core/proxy_service/__init__.py`, `core/proxy_service/service.py`。
+* [2025-06-02 17:11:35] - 完成 `core/auth_service` 模块初始框架创建。
+    * 创建了 `core/auth_service/__init__.py`。
+    * 创建了 `core/auth_service/service.py` 并定义了 `authenticate_user`, `authorize_request`, `load_session_state`, `save_session_state` 的占位符实现，包含简体中文注释和类型提示。
+    * 详细工作过程记录在 `memory-bank/activeContext.md`。
+* [2025-06-02 17:17:05] - 完成 `core/gui_service` 模块初始框架创建。
+    * 创建了 `core/gui_service/__init__.py`。
+    * 创建了 `core/gui_service/service.py` 并定义了 `launch_gui`, `manage_process`, `get_service_status` 的占位符实现，包含简体中文注释、文档字符串和类型提示。
+    * 详细工作过程记录在 `memory-bank/activeContext.md`。
