@@ -26,3 +26,5 @@ Flask             # Used in llm.py
 # Stream Proxy
 aiosocks~=0.2.6
 python-socks~=2.7.1
+httpx
+bcrypt
