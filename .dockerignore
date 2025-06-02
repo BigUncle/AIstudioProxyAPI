@@ -4,7 +4,7 @@ __pycache__/
 .gitignore
 .vscode/
 deprecated_javascript_version/
-memory-bank/
+# memory-bank/
 *.log
 *.DS_Store
 venv/
